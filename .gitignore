@@ -1,0 +1,18 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore env/config
+.env
+
+# Ignore vendor (if any)
+vendor/
+
+# Ignore logs
+*.log
+
+# Ignore database backup
+# *.sql
+
+# Ignore node modules (if any)
+node_modules/

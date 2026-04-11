@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isLoggedIn()) {
     } else {
         setFlash('error', 'You are already registered for this event.');
     }
-    redirect('/pages/events.php');
+    redirect('/blood/pages/events.php');
 }
 
 //$events = $db->query("SELECT e.*, (SELECT COUNT(*) FROM event_registrations er WHERE er.event_id=e.id) as reg_count FROM events ORDER BY event_date ASC");
@@ -86,7 +86,7 @@ include '../includes/header.php';
                         <div>
                             <?php if ($ev['status'] === 'Upcoming' && !$isPast): ?>
                                 <?php if (!isLoggedIn()): ?>
-                                    <a href="/login.php" class="btn btn-outline-dark btn-sm">Login to Register</a>
+                                    <a href="/blood/login.php" class="btn btn-outline-dark btn-sm">Login to Register</a>
                                 <?php elseif ($userRegistered): ?>
                                     <span class="btn btn-sm" style="background:#d4edda;color:#155724;cursor:default"><i class="fas fa-check"></i> Registered</span>
                                 <?php else: ?>

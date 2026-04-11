@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $db->query("UPDATE blood_inventory SET units_available=$u WHERE blood_group='$bg'");
     }
     setFlash('success', 'Inventory updated successfully!');
-    redirect('/admin/inventory.php');
+    redirect('/blood/admin/inventory.php');
 }
 
 $inventory = $db->query("SELECT bi.*, COUNT(u.id) as donors FROM blood_inventory bi LEFT JOIN users u ON u.blood_group=bi.blood_group AND u.role='donor' AND u.is_available=1 GROUP BY bi.blood_group ORDER BY bi.blood_group");
@@ -29,20 +29,20 @@ include '../includes/header.php';
     <aside class="sidebar">
         <div class="sidebar-section">
             <h4>Main</h4>
-            <a href="/admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            <a href="/admin/donors.php"><i class="fas fa-users"></i> Manage Donors</a>
-            <a href="/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
-            <a href="/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
+            <a href="/blood/admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="/blood/admin/donors.php"><i class="fas fa-users"></i> Manage Donors</a>
+            <a href="/blood/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
+            <a href="/blood/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
         </div>
         <div class="sidebar-section">
             <h4>Manage</h4>
-            <a href="/admin/inventory.php" class="active"><i class="fas fa-warehouse"></i> Blood Inventory</a>
-            <a href="/admin/events.php"><i class="fas fa-calendar-alt"></i> Events</a>
+            <a href="/blood/admin/inventory.php" class="active"><i class="fas fa-warehouse"></i> Blood Inventory</a>
+            <a href="/blood/admin/events.php"><i class="fas fa-calendar-alt"></i> Events</a>
         </div>
         <div class="sidebar-section">
             <h4>Account</h4>
-            <a href="/index.php"><i class="fas fa-home"></i> View Site</a>
-            <a href="/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="/blood/index.php"><i class="fas fa-home"></i> View Site</a>
+            <a href="/blood/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
     </aside>
 

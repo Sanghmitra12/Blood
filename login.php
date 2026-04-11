@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['role'] = $user['role'];
             $_SESSION['blood_group'] = $user['blood_group'];
             setFlash('success', 'Welcome back, ' . $user['full_name'] . '!');
-            redirect($user['role'] === 'admin' ? '/admin/dashboard.php' : '/donor/profile.php');
+            redirect($user['role'] === 'admin' ? '/blood/admin/dashboard.php' : '/donor/profile.php');
         } else {
             $error = 'Invalid password.';
         }

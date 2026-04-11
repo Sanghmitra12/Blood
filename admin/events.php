@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_event'])) {
             $stmt->execute();
             setFlash('success', 'Event created successfully!');
         }
-        redirect('/admin/events.php');
+        redirect('/blood/admin/events.php');
     }
 }
 
@@ -43,7 +43,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
     $id = intval($_GET['delete']);
     $db->query("DELETE FROM events WHERE id=$id");
     setFlash('success', 'Event deleted.');
-    redirect('/admin/events.php');
+    redirect('/blood/admin/events.php');
 }
 
 $events = $db->query("SELECT e.*, (SELECT COUNT(*) FROM event_registrations er WHERE er.event_id=e.id) as reg_count FROM events ORDER BY event_date DESC");
@@ -56,20 +56,20 @@ include '../includes/header.php';
     <aside class="sidebar">
         <div class="sidebar-section">
             <h4>Main</h4>
-            <a href="/admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            <a href="/admin/donors.php"><i class="fas fa-users"></i> Manage Donors</a>
-            <a href="/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
-            <a href="/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
+            <a href="/blood/admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="/blood/admin/donors.php"><i class="fas fa-users"></i> Manage Donors</a>
+            <a href="/blood/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
+            <a href="/blood/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
         </div>
         <div class="sidebar-section">
             <h4>Manage</h4>
-            <a href="/admin/inventory.php"><i class="fas fa-warehouse"></i> Blood Inventory</a>
-            <a href="/admin/events.php" class="active"><i class="fas fa-calendar-alt"></i> Events</a>
+            <a href="/blood/admin/inventory.php"><i class="fas fa-warehouse"></i> Blood Inventory</a>
+            <a href="/blood/admin/events.php" class="active"><i class="fas fa-calendar-alt"></i> Events</a>
         </div>
         <div class="sidebar-section">
             <h4>Account</h4>
-            <a href="/index.php"><i class="fas fa-home"></i> View Site</a>
-            <a href="/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="/blood/index.php"><i class="fas fa-home"></i> View Site</a>
+            <a href="/blood/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
     </aside>
 
@@ -137,7 +137,7 @@ include '../includes/header.php';
                     </div>
                     <div style="display:flex;gap:1rem">
                         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> <?php echo $edit_id ? 'Update' : 'Create'; ?> Event</button>
-                        <a href="/admin/events.php" class="btn btn-outline-dark">Cancel</a>
+                        <a href="/blood/admin/events.php" class="btn btn-outline-dark">Cancel</a>
                     </div>
                 </form>
             </div>

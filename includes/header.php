@@ -55,10 +55,10 @@
 
     <ul class="nav-links" id="navLinks">
         <li><a href="<?php echo $base; ?>index.php">Home</a></li>
-        <li><a href="<?php echo $base; ?>pages/donors.php">Find Donors</a></li>
-        <li><a href="<?php echo $base; ?>pages/request.php">Request Blood</a></li>
-        <li><a href="<?php echo $base; ?>pages/events.php">Events</a></li>
-        <li><a href="<?php echo $base; ?>pages/inventory.php">Inventory</a></li>
+        <li><a href="<?php echo $base; ?>/pages/donors.php">Find Donors</a></li>
+        <li><a href="<?php echo $base; ?>/pages/request.php">Request Blood</a></li>
+        <li><a href="<?php echo $base; ?>/pages/events.php">Events</a></li>
+        <li><a href="<?php echo $base; ?>/pages/inventory.php">Inventory</a></li>
 
         <?php if (isLoggedIn()): ?>
             <?php if (isAdmin()): ?>

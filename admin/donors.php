@@ -12,7 +12,7 @@ if (isset($_GET['toggle']) && is_numeric($_GET['toggle'])) {
     $id = intval($_GET['toggle']);
     $db->query("UPDATE users SET is_available = 1 - is_available WHERE id=$id AND role='donor'");
     setFlash('success', 'Donor availability updated.');
-    redirect('/admin/donors.php');
+    redirect('/blood/admin/donors.php');
 }
 
 // Delete donor
@@ -20,7 +20,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
     $id = intval($_GET['delete']);
     $db->query("DELETE FROM users WHERE id=$id AND role='donor'");
     setFlash('success', 'Donor removed.');
-    redirect('/admin/donors.php');
+    redirect('/blood/admin/donors.php');
 }
 
 $search = sanitize($db, $_GET['search'] ?? '');
@@ -39,20 +39,20 @@ include '../includes/header.php';
     <aside class="sidebar">
         <div class="sidebar-section">
             <h4>Main</h4>
-            <a href="/admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            <a href="/admin/donors.php" class="active"><i class="fas fa-users"></i> Manage Donors</a>
-            <a href="/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
-            <a href="/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
+            <a href="/blood/admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="/blood/admin/donors.php" class="active"><i class="fas fa-users"></i> Manage Donors</a>
+            <a href="/blood/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
+            <a href="/blood/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
         </div>
         <div class="sidebar-section">
             <h4>Manage</h4>
-            <a href="/admin/inventory.php"><i class="fas fa-warehouse"></i> Blood Inventory</a>
-            <a href="/admin/events.php"><i class="fas fa-calendar-alt"></i> Events</a>
+            <a href="/blood/admin/inventory.php"><i class="fas fa-warehouse"></i> Blood Inventory</a>
+            <a href="/blood/admin/events.php"><i class="fas fa-calendar-alt"></i> Events</a>
         </div>
         <div class="sidebar-section">
             <h4>Account</h4>
-            <a href="/index.php"><i class="fas fa-home"></i> View Site</a>
-            <a href="/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="/blood/index.php"><i class="fas fa-home"></i> View Site</a>
+            <a href="/blood/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
     </aside>
 
@@ -72,7 +72,7 @@ include '../includes/header.php';
                 <?php endforeach; ?>
             </select>
             <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Filter</button>
-            <a href="/admin/donors.php" class="btn btn-outline-dark">Reset</a>
+            <a href="/blood/admin/donors.php" class="btn btn-outline-dark">Reset</a>
         </form>
 
         <div class="table-wrap">

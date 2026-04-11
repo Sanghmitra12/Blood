@@ -57,7 +57,7 @@ include '../includes/header.php';
             </button>
 
             <!-- ✅ FIXED RESET -->
-            <a href="<?php echo $base; ?>pages/donors.php" class="btn btn-outline-dark">
+            <a href="<?php echo $base; ?>/blood/pages/donors.php" class="btn btn-outline-dark">
                 Reset
             </a>
         </form>
@@ -117,7 +117,7 @@ include '../includes/header.php';
                         <?php elseif (!isLoggedIn()): ?>
                             <div style="margin-top:1rem">
                                 <!-- ✅ FIXED LOGIN LINK -->
-                                <a href="<?php echo $base; ?>login.php" class="btn btn-outline-dark btn-sm">
+                                <a href="<?php echo $base; ?>/bloodlogin.php" class="btn btn-outline-dark btn-sm">
                                     Login to Contact
                                 </a>
                             </div>

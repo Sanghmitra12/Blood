@@ -13,20 +13,20 @@
         <div class="footer-links">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="/index.php">Home</a></li>
-                <li><a href="/pages/donors.php">Find Donors</a></li>
-                <li><a href="/pages/request.php">Request Blood</a></li>
-                <li><a href="/pages/events.php">Events</a></li>
-                <li><a href="/pages/inventory.php">Blood Inventory</a></li>
+                <li><a href="/blood/index.php">Home</a></li>
+                <li><a href="/blood/pages/donors.php">Find Donors</a></li>
+                <li><a href="/blood/pages/request.php">Request Blood</a></li>
+                <li><a href="/blood/pages/events.php">Events</a></li>
+                <li><a href="/blood/pages/inventory.php">Blood Inventory</a></li>
             </ul>
         </div>
         <div class="footer-links">
             <h4>Account</h4>
             <ul>
-                <li><a href="/register.php">Register as Donor</a></li>
-                <li><a href="/login.php">Login</a></li>
-                <li><a href="/donor/profile.php">My Profile</a></li>
-                <li><a href="/admin/dashboard.php">Admin Panel</a></li>
+                <li><a href="/blood/register.php">Register as Donor</a></li>
+                <li><a href="/blood/login.php">Login</a></li>
+                <li><a href="/blood/donor/profile.php">My Profile</a></li>
+                <li><a href="/blood/admin/dashboard.php">Admin Panel</a></li>
             </ul>
         </div>
         <div class="footer-contact">

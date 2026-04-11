@@ -1,6 +1,8 @@
+<?php $base = "/blood/"; ?>
 <?php
 require_once '../includes/auth.php';
 require_once '../includes/db.php';
+
 
 requireLogin();
 requireAdmin();
@@ -27,20 +29,20 @@ include '../includes/header.php';
     <aside class="sidebar">
         <div class="sidebar-section">
             <h4>Main</h4>
-            <a href="/admin/dashboard.php" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            <a href="/admin/donors.php"><i class="fas fa-users"></i> Manage Donors</a>
-            <a href="/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
-            <a href="/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
+            <a href="/blood/admin/dashboard.php" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="/blood/admin/donors.php"><i class="fas fa-users"></i> Manage Donors</a>
+            <a href="/blood/admin/requests.php"><i class="fas fa-tint"></i> Blood Requests</a>
+            <a href="/blood/admin/donations.php"><i class="fas fa-hand-holding-heart"></i> Donations Log</a>
         </div>
         <div class="sidebar-section">
             <h4>Manage</h4>
-            <a href="/admin/inventory.php"><i class="fas fa-warehouse"></i> Blood Inventory</a>
-            <a href="/admin/events.php"><i class="fas fa-calendar-alt"></i> Events</a>
+            <a href="/blood/admin/inventory.php"><i class="fas fa-warehouse"></i> Blood Inventory</a>
+            <a href="/blood/admin/events.php"><i class="fas fa-calendar-alt"></i> Events</a>
         </div>
         <div class="sidebar-section">
             <h4>Account</h4>
-            <a href="/index.php"><i class="fas fa-home"></i> View Site</a>
-            <a href="/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="/blood/index.php"><i class="fas fa-home"></i> View Site</a>
+            <a href="/blood/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
     </aside>
 
@@ -77,7 +79,7 @@ include '../includes/header.php';
             <div>
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
                     <h3 style="font-family:var(--font-display)">Recent Blood Requests</h3>
-                    <a href="/admin/requests.php" class="btn btn-outline-dark btn-sm">View All</a>
+                    <a href="/blood/admin/requests.php" class="btn btn-outline-dark btn-sm">View All</a>
                 </div>
                 <div class="table-wrap">
                     <table>
@@ -100,7 +102,7 @@ include '../includes/header.php';
             <div>
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
                     <h3 style="font-family:var(--font-display)">New Donors</h3>
-                    <a href="/admin/donors.php" class="btn btn-outline-dark btn-sm">View All</a>
+                    <a href="/blood/admin/donors.php" class="btn btn-outline-dark btn-sm">View All</a>
                 </div>
                 <?php while($donor = $recent_donors->fetch_assoc()):
                     $bg_class = 'blood-' . str_replace(['+','-'], ['-pos','-neg'], $donor['blood_group']);
@@ -127,10 +129,10 @@ include '../includes/header.php';
         <div style="margin-top:2rem;background:var(--charcoal);border-radius:var(--radius);padding:1.5rem">
             <h3 style="font-family:var(--font-display);color:var(--white);margin-bottom:1rem">Quick Actions</h3>
             <div style="display:flex;gap:1rem;flex-wrap:wrap">
-                <a href="/admin/events.php?action=new" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add Event</a>
-                <a href="/admin/inventory.php" class="btn btn-gold btn-sm"><i class="fas fa-edit"></i> Update Inventory</a>
-                <a href="/admin/requests.php" class="btn btn-outline btn-sm"><i class="fas fa-tint"></i> View Requests</a>
-                <a href="/admin/donations.php?action=new" class="btn btn-outline btn-sm"><i class="fas fa-hand-holding-heart"></i> Log Donation</a>
+                <a href="/blood/admin/events.php" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Add Event</a>
+                <a href="/blood/admin/inventory.php" class="btn btn-gold btn-sm"><i class="fas fa-edit"></i> Update Inventory</a>
+                <a href="/blood/admin/requests.php" class="btn btn-outline btn-sm"><i class="fas fa-tint"></i> View Requests</a>
+                <a href="/blood/admin/donations.php?action=new" class="btn btn-outline btn-sm"><i class="fas fa-hand-holding-heart"></i> Log Donation</a>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
 //define('DB_HOST', 'localhost');
 //define('DB_USER', 'root');
-//define('DB_PASS', 'Sh@ilja2602');
+//define('DB_PASS', '');
 //define('DB_NAME', 'blood');
 
 define('DB_HOST', '127.0.0.1');

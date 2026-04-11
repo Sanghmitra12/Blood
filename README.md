@@ -3,47 +3,6 @@
 
 ---
 
-## 📁 Project Structure
-
-```
-blood-donation/
-├── index.php                  ← Home page
-├── login.php                  ← User login
-├── register.php               ← Donor registration
-├── logout.php                 ← Session logout
-├── database.sql               ← MySQL database setup
-├── .htaccess                  ← Apache security config
-│
-├── includes/
-│   ├── db.php                 ← Database connection
-│   ├── auth.php               ← Session & auth helpers
-│   ├── header.php             ← Navigation header
-│   └── footer.php            ← Footer template
-│
-├── assets/
-│   ├── css/style.css          ← Full design system
-│   └── js/main.js             ← Frontend JS
-│
-├── pages/                     ← Public pages
-│   ├── donors.php             ← Search & find donors
-│   ├── request.php            ← Submit blood request
-│   ├── events.php             ← Campus events
-│   └── inventory.php         ← Blood bank stock
-│
-├── donor/
-│   └── profile.php           ← Donor profile & history
-│
-└── admin/
-    ├── dashboard.php          ← Admin overview
-    ├── donors.php             ← Manage all donors
-    ├── requests.php           ← Manage blood requests
-    ├── donations.php          ← Log & track donations
-    ├── inventory.php          ← Update blood stock
-    └── events.php            ← Create & manage events
-```
-
----
-
 ## ⚙️ Setup Instructions
 
 ### Requirements

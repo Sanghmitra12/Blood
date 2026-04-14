@@ -29,12 +29,12 @@ define('DB_NAME', 'blood_donation_db');
 
 ### Step 3 — Place Project
 - Copy the `blood-donation/` folder to your server's web root:
-  - XAMPP: `C:/xampp/htdocs/blood-donation/`
-  - Linux: `/var/www/html/blood-donation/`
+  - XAMPP: `C:/xampp/htdocs/blood/`
+  - Linux: `/var/www/html/blood/`
 
 ### Step 4 — Access the App
-- Site: `http://localhost/blood-donation/`
-- Admin: `http://localhost/blood-donation/admin/dashboard.php`
+- Site: `http://localhost/blood/`
+- Admin: `http://localhost/blood/admin/dashboard.php`
 
 ---
 
